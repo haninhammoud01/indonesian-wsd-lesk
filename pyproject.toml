@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indonesian-wsd-lesk"
+version = "1.0.0"
+description = "KBBI-gloss-based simplified Lesk word sense disambiguation for Indonesian biology essays (feature for automatic essay scoring)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Hanin" }]
+keywords = ["nlp", "indonesian", "wsd", "lesk", "kbbi", "automatic-essay-scoring"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Text Processing :: Linguistic",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "pandas>=1.5",
+  "PySastrawi>=1.0",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+aes = ["torch", "transformers>=4.20", "scikit-learn>=1.0", "openpyxl>=3.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+# Colab-export exploration script kept verbatim for reproducibility
+extend-exclude = ["experiments/aes_xlmroberta_exploration.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

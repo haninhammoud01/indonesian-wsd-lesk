@@ -1,0 +1,39 @@
+{
+ "n": 646,
+ "mcnemar": {
+  "final_vs_indosbert": {
+   "b": 165,
+   "c": 100,
+   "n_discordant": 265,
+   "chi2": 15.46,
+   "p_exact": 7.823e-05
+  },
+  "final_vs_hybrid": {
+   "b": 140,
+   "c": 85,
+   "n_discordant": 225,
+   "chi2": 12.96,
+   "p_exact": 0.0002989
+  },
+  "final_vs_stemming": {
+   "b": 87,
+   "c": 45,
+   "n_discordant": 132,
+   "chi2": 12.73,
+   "p_exact": 0.0003232
+  },
+  "final_vs_idf": {
+   "b": 2,
+   "c": 1,
+   "n_discordant": 3,
+   "chi2": 0.0,
+   "p_exact": 1.0
+  }
+ },
+ "contingency_final_vs_indosbert": {
+  "lesk_benar_bert_benar": 247,
+  "lesk_benar_bert_salah": 165,
+  "lesk_salah_bert_benar": 100,
+  "lesk_salah_bert_salah": 134
+ }
+}

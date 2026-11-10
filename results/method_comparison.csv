@@ -1,0 +1,7 @@
+config,description,tokens,correct,accuracy_pct
+lesk_stemming,Lesk + Sastrawi stemming (initial config),646,370,57.3
+lesk_nostem,Lesk without stemming,646,395,61.1
+lesk_final,Lesk without stemming + stopword-filtered context (FINAL),646,412,63.8
+lesk_final_idf,Final config + IDF weighting (rejected),646,411,63.6
+indosbert,IndoSBERT gloss-similarity baseline,646,347,53.7
+hybrid,"Hybrid: Lesk, fallback IndoSBERT when overlap=0",646,357,55.3

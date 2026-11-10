@@ -1,0 +1,7 @@
+pandas>=1.5
+PySastrawi>=1.0
+scipy>=1.10
+
+# Modern setup: pip install -e ".[dev]" (see pyproject.toml).
+# The lines below cover experiments/aes_xlmroberta_exploration.py:
+# torch, transformers, scikit-learn, openpyxl (install manually if needed)
